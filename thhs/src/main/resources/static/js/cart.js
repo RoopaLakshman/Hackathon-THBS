@@ -78,8 +78,7 @@ $(document)
 												+ '</div>' + '</td>'
 												+ '<td class="invert">'
 												+ data[i].productId + '</td>'
-												+ '<td class="invert">'
-												+ data[i].quantity + '0</td>'
+												+ '<td class="invert">Price</td>'
 												+ '</tr>'
 									}
 									$('#cartProducts tbody').append(json);
