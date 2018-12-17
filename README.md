@@ -1,5 +1,5 @@
 THHS - 
-This is a JAVA spring boot application which was developed for a Hackathon competition held in my company. We were team of 3 in this project.
+This is a JAVA spring boot application which was developed for a Hackathon competition held in my company. We were team of 3 members and the project was implemented in around 40 hours of timelines.
 
 Getting Started - 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
