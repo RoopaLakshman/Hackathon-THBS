@@ -155,23 +155,23 @@ public class BeanMappingUtil {
 	}
 
 	public CartDetailViewResponse mapCartDetailToCartDetailViewResponse(CartDetail cartDetails) {
-		CartDetailViewResponse CDVs = new CartDetailViewResponse();
+		CartDetailViewResponse cdvs = new CartDetailViewResponse();
 
-		CDVs.setCartId(cartDetails.getCartId());
-		CDVs.setProductId(cartDetails.getProductId());
-		CDVs.setQuantity(cartDetails.getQuantity());
+		cdvs.setCartId(cartDetails.getCartId());
+		cdvs.setProductId(cartDetails.getProductId());
+		cdvs.setQuantity(cartDetails.getQuantity());
 
-		return CDVs;
+		return cdvs;
 	}
 
 	public List<CartDetailViewResponse> mapCartDetailsToCartDetailsViewResponse(List<CartDetail> cartDetails) {
-		List<CartDetailViewResponse> CDViews = new ArrayList<CartDetailViewResponse>();
+		List<CartDetailViewResponse> cdViews = new ArrayList<CartDetailViewResponse>();
 
 		for (CartDetail cartDetail : cartDetails) {
-			CDViews.add(mapCartDetailToCartDetailViewResponse(cartDetail));
+			cdViews.add(mapCartDetailToCartDetailViewResponse(cartDetail));
 		}
 
-		return CDViews;
+		return cdViews;
 	}
 
 	public static List<ProductDetailView> mapProductDetailsToViewResponse(List<ProductDetail> productdetails) {
