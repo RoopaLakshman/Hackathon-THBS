@@ -1,0 +1,334 @@
+swagger: '2.0'
+info:
+  description: API description for Problem Statement - ProHackative event
+  version: 1.0.0
+  title: XYZ Corp eCom API
+  termsOfService: 'http://swagger.io/terms/'
+  contact:
+    email: prohacktive@thbs.com
+basePath: /team-member/api
+tags:
+  - name: Login
+    description: login module
+  - name: Product
+    description: product module
+  - name: Cart
+    description: cart module
+  - name: Submit
+    description: submit module
+schemes:
+  - http
+paths:
+  /login:
+    post:
+      tags:
+        - Login
+      summary: Login API
+      description: ''
+      operationId: login
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: username and password should be passed
+          required: true
+          schema:
+            $ref: '#/definitions/Credentials'
+      responses:
+        '200':
+          description: successful login
+          schema:
+            $ref: '#/definitions/Token'
+        '400':
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/Message'
+        '401':
+          description: Invalid Credentials
+          schema:
+            $ref: '#/definitions/Message'
+  /product/view:
+    get:
+      tags:
+        - Product
+      summary: get the product details
+      description: get the list of product details
+      operationId: products
+      produces:
+        - application/json
+      parameters:
+        - name: token
+          in: header
+          description: Resource access token
+          required: true
+          type: string
+      responses:
+        '200':
+          description: successful operation
+          schema:
+            items:
+              $ref: '#/definitions/ProductDetail'
+        '400':
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/Message'
+        '401':
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/Message'
+  /product/add:
+    post:
+      tags:
+        - Product
+      summary: Add a new product 
+      description: Add a product into the catalog
+      operationId: addProduct
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: Product Details
+          required: true
+          schema:
+            $ref: '#/definitions/ProductDetail'
+      responses:
+        '200':
+          description: successful operation
+          schema:
+            items:
+              $ref: '#/definitions/ProductDetail'
+        '400':
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/Message'
+        '401':
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/Message'
+  /cart/add:
+    post:
+      tags:
+        - Cart
+      summary: add the items to cart
+      description: add the items to cart
+      operationId: add
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: product id and quantity should be passed
+          required: true
+          schema:
+            $ref: '#/definitions/CartDetails'
+        - name: token
+          in: header
+          description: Resource access token
+          required: true
+          type: string
+      responses:
+        '200':
+          description: successful operation
+          schema:
+            $ref: '#/definitions/CartId'
+        '400':
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/Message'
+        '401':
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/Message'
+  /cart/view:
+    get:
+      tags:
+        - Cart
+      summary: View the cart details for a user
+      description: View the cart details for a user
+      operationId: view
+      produces:
+        - application/json
+      parameters:
+        - name: token
+          in: header
+          description: Resource access token
+          required: true
+          type: string
+      responses:
+        '200':
+          description: successful operation
+          schema:
+            $ref: '#/definitions/CartDetails'
+        '400':
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/Message'
+        '401':
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/Message'
+  /cart/modify:
+    put:
+      tags:
+        - Cart
+      summary: modify the cart
+      description: modify the cart items
+      operationId: modify
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: product id and quantity should be passed
+          required: true
+          schema:
+            $ref: '#/definitions/CartDetails'
+        - name: token
+          in: header
+          description: Resource access token
+          required: true
+          type: string
+      responses:
+        '200':
+          description: successful operation
+          schema:
+            $ref: '#/definitions/CartDetails'
+        '400':
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/Message'
+        '401':
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/Message'
+  /cart/delete:
+    delete:
+      tags:
+        - Cart
+      summary: delete the items
+      description: delete items from the cart
+      operationId: delete
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: product id and cart id should be passed
+          required: true
+          schema:
+            $ref: '#/definitions/CartDetails'
+        - name: token
+          in: header
+          description: Resource access token
+          required: true
+          type: string
+      responses:
+        '200':
+          description: successful operation
+          schema:
+            $ref: '#/definitions/Message'
+        '400':
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/Message'
+        '401':
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/Message'
+  /submit:
+    post:
+      tags:
+        - Submit
+      summary: submit the cart details
+      description: submit the cart
+      operationId: submitCart
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: pass cartId
+          required: true
+          schema:
+            $ref: '#/definitions/CartId'
+        - name: token
+          in: header
+          description: Resource access token
+          required: true
+          type: string
+      responses:
+        '200':
+          description: successful operation
+          schema:
+            $ref: '#/definitions/OrderId'
+        '400':
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/Message'
+        '401':
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/Message'
+definitions:
+  Credentials:
+    type: object
+    properties:
+      username:
+        type: string
+      password:
+        type: string
+  Token:
+    type: object
+    properties:
+      usertoken:
+        type: string
+  ProductDetail:
+    type: object
+    properties:
+      name:
+        type: string
+      description:
+        type: string
+      cost:
+        type: string
+      category:
+        type: string
+      currency:
+        type: string
+      qtyAvailable:
+        type: integer
+        format: int64
+  CartDetail:
+    type: object
+    properties:
+      productId:
+        type: string
+      quantity:
+        type: integer
+        format: int64
+      cartId:
+        type: string
+  CartDetails:
+    type: array
+    items:
+      $ref: '#/definitions/CartDetail'
+  CartId:
+    type: object
+    properties:
+      cartId:
+        type: string
+  OrderId:
+    type: object
+    properties:
+      orderId:
+        type: integer
+        format: int 64
+  Message:
+    type: object
+    properties:
+      code:
+        type: string
