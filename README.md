@@ -48,6 +48,6 @@ Authors -
 Roopa Lakshmanaiah
 
 Acknowledgments - 
-Vasant Sakre
-Nagesh MH
-Our company's UI team
+Vasant Sakre,
+Nagesh MH,
+Our company's UX/UI team
