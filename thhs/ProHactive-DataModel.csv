@@ -1,0 +1,11 @@
+﻿username,Password,Name,Address ,phonenumber,preference,cartid,username,productid,orderquantity,productid,productname,description,quantityavailable,Currency,Price,Category
+ralph_ray,thbs,RalpH Ray,"10, Downing Street, LA 3ED 5B7",(1022) 233-9202,HomeElectricals,,,,,,,,,,,
+s_jones,Smith999!@,Smit Jones,"22 Ivory Island, New York, WE9 87G",(1121) 335-6784,Lights,,,,,,,,,,,
+roverd,April23!,David Rover,98 Manning Town Events Day TowerNew Jersey 23E 55K,(2344) 749-5671,Logistics,,,,,,,,,,,
+,,,,,,1,ralph_ray,101,2,,,,,,,
+,,,,,,1,ralph_ray,102,5,,,,,,,
+,,,,,,2,s_jones,103,3,,,,,,,
+,,,,,,3,roverd,103,1,,,,,,,
+,,,,,,,,,,101,Water Heaters,Water heaters for home. 50L capacity. 50W Power,10,$,120,HomeElectricals
+,,,,,,,,,,102,Prism,Multi color lights,5,$,25,Lights
+,,,,,,,,,,103,Tracker,GPS tracker for vehicles,8,USD,250,Logistics
