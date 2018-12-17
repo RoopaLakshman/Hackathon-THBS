@@ -29,7 +29,7 @@ Port 7000 should not be in use
 How to Build? -
 1. Download the project and unzip.
 2. Open command prompt -> Navigate to project directory thhs
-3. Run "mvn package" command
+3. Run "mvnw package" command
 4. If the build executes successfully then it should create a jar by name thhs<version>.jar in target folder
 5. Navigate to target folder and double check if the jar exists
 
