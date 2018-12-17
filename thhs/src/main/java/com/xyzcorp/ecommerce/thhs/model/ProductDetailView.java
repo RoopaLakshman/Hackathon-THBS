@@ -1,22 +1,13 @@
 package com.xyzcorp.ecommerce.thhs.model;
 
-public class ProductDetail {
+public class ProductDetailView {
 
-	private String productId;
 	private String name;
 	private String description;
 	private String cost;
 	private String category;
 	private String currency;
 	private Integer qtyAvailable;
-
-	public String getProductId() {
-		return productId;
-	}
-
-	public void setProductId(String productId) {
-		this.productId = productId;
-	}
 
 	public String getName() {
 		return name;
@@ -68,7 +59,7 @@ public class ProductDetail {
 
 	@Override
 	public String toString() {
-		return "ProductDetail [productId=" + productId + ", name=" + name + ", description=" + description + ", cost="
+		return "ProductDetail [ name=" + name + ", description=" + description + ", cost="
 				+ cost + ", category=" + category + ", currency=" + currency + ", qtyAvailable=" + qtyAvailable + "]";
 	}
 

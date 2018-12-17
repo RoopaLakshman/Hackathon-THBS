@@ -1,8 +1,5 @@
 package com.xyzcorp.ecommerce.thhs.rest;
 
-import java.io.IOException;
-
-import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
@@ -16,13 +13,14 @@ public class HomePageController {
 
 	// expose "/" to return to "main landing page"
 	@RequestMapping("/")
-	public void redirectToProductList(HttpServletResponse response) {
-		try {
-			response.sendRedirect("product/view");
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+	public String redirectToProductList() {
+		return "index";
+	}
+
+	// expose "/checkout" to return to "checkout page"
+	@RequestMapping("/checkout")
+	public String redirectToCheckOut() {
+		return "checkout";
 	}
 
 }

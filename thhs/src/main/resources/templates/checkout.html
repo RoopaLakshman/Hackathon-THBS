@@ -23,6 +23,10 @@
 	<link href="../../css/montserrat.css" th:href="@{/css/montserrat.css}" rel='stylesheet' type='text/css' media="all" />
 	<link href="../../css/lato.css" th:href="@{/css/lato.css}" rel='stylesheet' type='text/css' media="all" />
 	<script src="../../js/jquery.easing.min.js" th:src="@{/js/jquery.easing.min.js}"></script>
+	<script type="text/javascript" th:src="@{/js/jquery.cookie.js}"	src="../../jquery.cookie.js"></script>
+	
+	<script type="text/javascript" src="../../js/cart.js" th:src="@{/js/cart.js}"></script>
+	<script type="text/javascript" th:src="@{/js/generic.js}"	src="../../js/generic.js"></script>
 </head>
 <body>
 <!-- header -->
@@ -60,9 +64,8 @@
 			</form>
 		</div>
 		<div class="col-md-3 header-right footer-bottom">
-			<ul>
+			<ul id="loginIcons">
 				<li><a href="#" class="use1" data-toggle="modal" data-target="#myModal4"><span>Login</span></a>
-					
 				</li>
 				<li><a class="fb" href="#"></a></li>
 			</ul>
@@ -89,8 +92,8 @@
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse menu--shylock" id="bs-example-navbar-collapse-1">
 				  <ul class="nav navbar-nav menu__list">
-					<li class="active menu__item "><a class="menu__link" href="index.html">Home <span class="sr-only">(current)</span></a></li>
-					<li class=" menu__item"><a class="menu__link" href="electronics.html">Electronics</a></li>
+					<li class="active menu__item "><a class="menu__link" href="/thhs/api">Home <span class="sr-only">(current)</span></a></li>
+					<li class=" menu__item"><a class="menu__link" href="/thhs/api">Electronics</a></li>
 				
 				  </ul>
 				</div>
@@ -99,12 +102,18 @@
 		</div>
 		<div class="top_nav_right">
 			<div class="cart box_1">
-						<a href="checkout.html">
-							<h3> <div class="total">
+						<a href="#">
+							<!-- <h3> <div class="total">
 								<i class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i>
 								<span class="simpleCart_total"></span> (<span id="simpleCart_quantity" class="simpleCart_quantity"></span> items)</div>
 								
-							</h3>
+							</h3> -->
+							<div class="total">
+									<i class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i>
+									<span id="simpleCart_totalNew" class="simpleCart_totalNew">$0.0</span> ( <span
+										id="simpleCart_quantityNew" class="simpleCart_quantityNew">0 items</span>
+									)
+								</div>
 						</a>
 						<p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
 						
@@ -126,7 +135,7 @@
 	<div class="container">
 		<h3>My Shopping Bag</h3>
 		<div class="table-responsive checkout-right animated wow slideInUp" data-wow-delay=".5s">
-			<table class="timetable_sub">
+			<table class="timetable_sub" id="cartProducts">
 				<thead>
 					<tr>
 						<th>Remove</th>
@@ -136,146 +145,21 @@
 						<th>Price</th>
 					</tr>
 				</thead>
-					<tr class="rem1">
-						<td class="invert-closeb">
-							<div class="rem">
-								<div class="close1"> </div>
-							</div>
-							<script>$(document).ready(function(c) {
-								$('.close1').on('click', function(c){
-									$('.rem1').fadeOut('slow', function(c){
-										$('.rem1').remove();
-									});
-									});	  
-								});
-						   </script>
-						</td>
-						<td class="invert-image"><a href="#"><img src="images/a1.jpg" alt=" " class="img-responsive" /></a></td>
-						<td class="invert">
-							 <div class="quantity"> 
-								<div class="quantity-select">                           
-									<div class="entry value-minus">&nbsp;</div>
-									<div class="entry value"><span>1</span></div>
-									<div class="entry value-plus active">&nbsp;</div>
-								</div>
-							</div>
-						</td>
-						<td class="invert">Product 1</td>
-						<td class="invert">$45.99</td>
-					</tr>
-					<tr class="rem2">
-						<td class="invert-closeb">
-							<div class="rem">
-								<div class="close2"> </div>
-							</div>
-							<script>$(document).ready(function(c) {
-								$('.close2').on('click', function(c){
-									$('.rem2').fadeOut('slow', function(c){
-										$('.rem2').remove();
-									});
-									});	  
-								});
-						   </script>
-						</td>
-						<td class="invert-image"><a href="#"><img src="images/a2.jpg" alt=" " class="img-responsive" /></a></td>
-						<td class="invert">
-							 <div class="quantity"> 
-								<div class="quantity-select">                           
-									<div class="entry value-minus">&nbsp;</div>
-									<div class="entry value"><span>1</span></div>
-									<div class="entry value-plus active">&nbsp;</div>
-								</div>
-							</div>
-						</td>
-						<td class="invert">Product 2</td>
-						<td class="invert">$45.99</td>
-						
-					</tr>
-					<tr class="rem3">
-						<td class="invert-closeb">
-							<div class="rem">
-								<div class="close3"> </div>
-							</div>
-							<script>$(document).ready(function(c) {
-								$('.close3').on('click', function(c){
-									$('.rem3').fadeOut('slow', function(c){
-										$('.rem3').remove();
-									});
-									});	  
-								});
-						   </script>
-						</td>
-						<td class="invert-image"><a href="#"><img src="images/a4.jpg" alt=" " class="img-responsive" /></a></td>
-						<td class="invert">
-							 <div class="quantity"> 
-								<div class="quantity-select">                           
-									<div class="entry value-minus">&nbsp;</div>
-									<div class="entry value"><span>1</span></div>
-									<div class="entry value-plus active">&nbsp;</div>
-								</div>
-							</div>
-						</td>
-						<td class="invert">Product 3</td>
-						<td class="invert">$45.99</td>
-						
-					</tr>
-					<tr class="rem4">
-						<td class="invert-closeb">
-							<div class="rem">
-								<div class="close4"> </div>
-							</div>
-							<script>$(document).ready(function(c) {
-								$('.close4').on('click', function(c){
-									$('.rem4').fadeOut('slow', function(c){
-										$('.rem4').remove();
-									});
-									});	  
-								});
-						   </script>
-						</td>
-						<td class="invert-image"><a href="#"><img src="images/a5.jpg" alt=" " class="img-responsive" /></a></td>
-						<td class="invert">
-							 <div class="quantity"> 
-								<div class="quantity-select">                           
-									<div class="entry value-minus">&nbsp;</div>
-									<div class="entry value"><span>1</span></div>
-									<div class="entry value-plus active">&nbsp;</div>
-								</div>
-							</div>
-						</td>
-						<td class="invert">Product 4</td>
-						<td class="invert">$45.99</td>
-						
-					</tr>
-					
-								<!--quantity-->
-									<script>
-									$('.value-plus').on('click', function(){
-										var divUpd = $(this).parent().find('.value'), newVal = parseInt(divUpd.text(), 10)+1;
-										divUpd.text(newVal);
-									});
-
-									$('.value-minus').on('click', function(){
-										var divUpd = $(this).parent().find('.value'), newVal = parseInt(divUpd.text(), 10)-1;
-										if(newVal>=1) divUpd.text(newVal);
-									});
-									</script>
-								<!--quantity-->
+				<tbody>
+				</tbody>
 			</table>
 		</div>
 		<div class="checkout-left">	
-				
+					<div><input class="submitCart" type="button" value="Submit Cart"/></div>
+				<br/>
+				<br/>
 				<div class="checkout-right-basket animated wow slideInRight" data-wow-delay=".5s">
-					<a href="mens.html"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>Back To Shopping</a>
+					<a href="/thhs/api"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>Back To Shopping</a>
 				</div>
 				<div class="checkout-left-basket animated wow slideInLeft" data-wow-delay=".5s">
 					<h4>Shopping basket</h4>
-					<ul>
-						<li>Product 1 <i>-</i> <span>$45.99</span></li>
-						<li>Product 2 <i>-</i> <span>$45.99</span></li>
-						<li>Product 3 <i>-</i> <span>$45.99</span></li>
-						<li>Product 4<i>-</i> <span>$45.99</span></li>
-						<li>Product 5 <i>-</i> <span>$183.96</span></li>
+					<ul id="summaryBasket">
+						
 					</ul>
 				</div>
 				<div class="clearfix"> </div>

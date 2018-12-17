@@ -2720,6 +2720,10 @@ td.invert-image a img {
 .rem{
 	position:relative;
 }
+div[class^="rem"]{
+		position:relative;
+}
+
 .close1,.close2,.close3,.close4 {
     background: url('../images/close_1.png') no-repeat 0px 0px;
     cursor: pointer;
@@ -2733,6 +2737,21 @@ td.invert-image a img {
     -o-transition: color 0.2s ease-in-out;
     transition: color 0.2s ease-in-out;
 }
+
+div[class^="close"]{
+    background: url('../images/close_1.png') no-repeat 0px 0px;
+    cursor: pointer;
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    right: 42px;
+    top: -13px;
+    -webkit-transition: color 0.2s ease-in-out;
+    -moz-transition: color 0.2s ease-in-out;
+    -o-transition: color 0.2s ease-in-out;
+    transition: color 0.2s ease-in-out;
+}
+
 /*-- quantity-starts --*/
  .value-minus,
 .value-plus{
@@ -3058,6 +3077,9 @@ td.invert-image a img {
 	.close1, .close2, .close3, .close4 {
     right: 29px;
 	}
+	div[class^="close"]{
+    right: 29px;
+	}
 }
 @media (max-width: 1024px){
 	.header ul li,.section_room select,.header-middle input[type="search"] {
@@ -3327,6 +3349,9 @@ td.invert-image a img {
 	}
 	.close1, .close2, .close3, .close4 {
 		right: 26px;
+	}
+	div[class^="close"]{
+    	right: 26px;
 	}
 	.timetable_sub th {
 		font-size: 14px;
@@ -3635,6 +3660,9 @@ td.invert-image a img {
 	}
 	.close1, .close2, .close3, .close4 {
 		right: 36px;
+	}
+	div[class^="close"]{
+    	right: 36px;
 	}
 }
 @media (max-width: 667px){
@@ -3973,7 +4001,10 @@ td.invert-image a img {
 	}
 	.close1, .close2, .close3, .close4 {
     right: 33px;
-}
+	}
+	div[class^="close"]{
+    	right: 36px;
+	}
 }
 @media (max-width: 600px){
 	.top_nav_right {
@@ -4193,6 +4224,9 @@ td.invert-image a img {
 .close1, .close2, .close3, .close4 {
     right: 21px;
 }
+div[class^="close"]{
+    	right: 21px;
+	}
 }
 @media (max-width: 568px){
 	.content-img-right {
@@ -4228,8 +4262,16 @@ td.invert-image a img {
 		padding-top: 2em;
 		border-top:none;
 	}
+	tr[class^="rem"]{
+		padding-top: 2em;
+		border-top:none;
+	}
 	.close1, .close2, .close3 {
 		right: 190px;
+		top: -4px;
+	}
+	div[class^="close"]{
+    	right: 190px;
 		top: -4px;
 	}
 	.quantity-select .entry.value-plus:after {
@@ -4254,6 +4296,10 @@ td.invert-image a img {
 	}
 	.close1, .close2, .close3,.close4 {
 		right: 64px;
+		top: -26px;
+	}
+	div[class^="close"]{
+    	right: 64px;
 		top: -26px;
 	}
 	.checkout-left-basket {
@@ -4462,6 +4508,10 @@ td.invert-image a img {
     right: 21px;
     top: -12px;
 }
+div[class^="close"]{
+    right: 21px;
+    top: -12px;
+}
 .value-minus, .value-plus {
     height: 25px;
     width: 25px;
@@ -4478,10 +4528,16 @@ td.invert-image a img {
 .close1, .close2, .close3, .close4 {
     right: 17px;
 }
+div[class^="close"]{
+    right: 17px;
+}
 td.invert-image a img {
     width: 82%;
 }
 .close1, .close2, .close3, .close4 {
+    right: 9px;
+}
+div[class^="close"]{
     right: 9px;
 }
 }
@@ -4627,6 +4683,9 @@ td.invert-image a img {
 	.close1, .close2, .close3, .close4 {
 		right: 53px;
 	}
+	div[class^="close"]{
+    	right: 53px;
+	}
 	.check_box {
 		margin-bottom: 6px;
 	}
@@ -4668,6 +4727,9 @@ td.invert-image a img {
 .close1, .close2, .close3, .close4 {
     right: 12px;
 }
+div[class^="close"]{
+    right: 12px;
+}
 }
 @media (max-width: 384px){
 	.header ul li {
@@ -4691,6 +4753,9 @@ td.invert-image a img {
 	}
 	.close1, .close2, .close3, .close4 {
 		right: 46px;
+	}
+	div[class^="close"]{
+    	right: 46px;
 	}
 	.checkout-right-basket a {
 		padding: 10px 44px;
@@ -4779,6 +4844,9 @@ td.invert-image a img {
 .close1, .close2, .close3, .close4 {
     right: 9px;
 }
+	div[class^="close"]{
+    	right: 9px;
+	}
 .dropdown-menu {
     min-width: 111px;
 }
@@ -4830,6 +4898,9 @@ td.invert-image a img {
 .close1, .close2, .close3, .close4 {
     right: 18px;
 }
+div[class^="close"]{
+    	right: 18px;
+	}
 .header-left {
     width: 46%;
 }
@@ -5083,6 +5154,9 @@ td.invert-image a img {
 	}
 	.close1, .close2, .close3, .close4 {
 		right: 12px;
+	}
+	div[class^="close"]{
+    	right: 12px;
 	}
 	.timetable_sub th {
 		font-size: 12px;

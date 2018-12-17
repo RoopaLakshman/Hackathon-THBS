@@ -1,14 +1,15 @@
 package com.xyzcorp.ecommerce.thhs.model;
 
-public class ProductDetail {
+public class CartDetailsResponse {
 
 	private String productId;
+	private Integer quantity;
+	private String cartId;
 	private String name;
 	private String description;
-	private String cost;
+	private Integer cost;
 	private String category;
 	private String currency;
-	private Integer qtyAvailable;
 
 	public String getProductId() {
 		return productId;
@@ -16,6 +17,22 @@ public class ProductDetail {
 
 	public void setProductId(String productId) {
 		this.productId = productId;
+	}
+
+	public Integer getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(Integer quantity) {
+		this.quantity = quantity;
+	}
+
+	public String getCartId() {
+		return cartId;
+	}
+
+	public void setCartId(String cartId) {
+		this.cartId = cartId;
 	}
 
 	public String getName() {
@@ -34,11 +51,11 @@ public class ProductDetail {
 		this.description = description;
 	}
 
-	public String getCost() {
+	public Integer getCost() {
 		return cost;
 	}
 
-	public void setCost(String cost) {
+	public void setCost(Integer cost) {
 		this.cost = cost;
 	}
 
@@ -58,18 +75,11 @@ public class ProductDetail {
 		this.currency = currency;
 	}
 
-	public Integer getQtyAvailable() {
-		return qtyAvailable;
-	}
-
-	public void setQtyAvailable(Integer qtyAvailable) {
-		this.qtyAvailable = qtyAvailable;
-	}
-
 	@Override
 	public String toString() {
-		return "ProductDetail [productId=" + productId + ", name=" + name + ", description=" + description + ", cost="
-				+ cost + ", category=" + category + ", currency=" + currency + ", qtyAvailable=" + qtyAvailable + "]";
+		return "CartDetailsResponse [productId=" + productId + ", quantity=" + quantity + ", cartId=" + cartId
+				+ ", name=" + name + ", description=" + description + ", cost=" + cost
+				+ ", category=" + category + ", currency=" + currency + "]";
 	}
 
 }

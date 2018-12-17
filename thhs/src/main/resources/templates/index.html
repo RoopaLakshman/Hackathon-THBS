@@ -1,35 +1,47 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-
 <head>
-	<title>XYZ Corp </title>
-	<!-- for-mobile-apps -->
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="keywords" content="XYZ Corp Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+<title>XYZ Corp</title>
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords"
+	content="XYZ Corp Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
-	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
-		function hideURLbar(){ window.scrollTo(0,1); } </script>
-	<!-- //for-mobile-apps -->
-	<link href="../../css/bootstrap.css" th:href="@{/css/bootstrap.css}" rel="stylesheet" type="text/css" media="all" />
-	<!-- pignose css -->
-	<link href="../../css/pignose.layerslider.css" th:href="@{/css/pignose.layerslider.css}" rel="stylesheet" type="text/css" media="all" />
+
+<script type="application/x-javascript">
+	 addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } 
+</script>
+<!-- //for-mobile-apps -->
+<link href="../../css/bootstrap.css" th:href="@{/css/bootstrap.css}"
+	rel="stylesheet" type="text/css" media="all" />
+<!-- pignose css -->
+<link href="../../css/pignose.layerslider.css"
+	th:href="@{/css/pignose.layerslider.css}" rel="stylesheet"
+	type="text/css" media="all" />
 
 
-	<!-- //pignose css -->
-	<link href="../../css/style.css" th:href="@{/css/style.css}" rel="stylesheet" type="text/css" media="all" />
-	<!-- js -->
-	<script type="text/javascript" th:src="@{/js/jquery-2.1.4.min.js}" src="../../js/jquery-2.1.4.min.js"></script>
-	<!-- //js -->
-	<!-- cart -->
-	<script src="../../js/simpleCart.min.js" th:src="@{/js/simpleCart.min.js}"></script>
-	<!-- cart -->
-	<!-- for bootstrap working -->
-	<script type="text/javascript" src="../../js/bootstrap-3.1.1.min.js" th:src="@{/js/bootstrap-3.1.1.min.js}"></script>
-	<!-- //for bootstrap working -->
-	<link href="../../css/montserrat.css" th:href="@{/css/montserrat.css}" rel='stylesheet' type='text/css' media="all" />
-	<link href="../../css/lato.css" th:href="@{/css/lato.css}" rel='stylesheet' type='text/css' media="all" />
-	<script src="../../js/jquery.easing.min.js" th:src="@{/js/jquery.easing.min.js}"></script>
+<!-- //pignose css -->
+<link href="../../css/style.css" th:href="@{/css/style.css}" rel="stylesheet" type="text/css" media="all" />
+<!-- js -->
+<script type="text/javascript" src="../../js/jquery-2.1.4.min.js" th:src="@{/js/jquery-2.1.4.min.js}" ></script>
+<!-- //js -->
+
+<!-- cart -->
+<script src="../../js/simpleCart.min.js" th:src="@{/js/simpleCart.min.js}"></script>
+<!-- cart -->
+<!-- for bootstrap working -->
+<script type="text/javascript" src="../../js/bootstrap-3.1.1.min.js" th:src="@{/js/bootstrap-3.1.1.min.js}"></script>
+<!-- //for bootstrap working -->
+<link href="../../css/montserrat.css" th:href="@{/css/montserrat.css}" rel='stylesheet' type='text/css' media="all" />
+<link href="../../css/lato.css" th:href="@{/css/lato.css}"	rel='stylesheet' type='text/css' media="all" />
+<script src="../../js/jquery.easing.min.js"	th:src="@{/js/jquery.easing.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/jquery.cookie.js}"	src="../../jquery.cookie.js"></script>
+
+<script type="text/javascript" th:src="@{/js/product.js}"	src="../../js/product.js"></script>
+<script type="text/javascript" th:src="@{/js/login.js}"	src="../../js/login.js"></script>
+<script type="text/javascript" th:src="@{/js/generic.js}"	src="../../js/generic.js"></script>
 </head>
 
 <body>
@@ -37,13 +49,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="header">
 		<div class="container">
 			<ul>
-				<li>
-					<span class="glyphicon glyphicon-time" aria-hidden="true"></span>Free and Fast Delivery</li>
-				<li>
-					<span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>Free shipping On all orders</li>
-				<li>
-					<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
-					<a href="mailto:example@xyz.corp.com">info@xyz.corp.com</a>
+				<li><span class="glyphicon glyphicon-time" aria-hidden="true"></span>Free
+					and Fast Delivery</li>
+				<li><span class="glyphicon glyphicon-shopping-cart"
+					aria-hidden="true"></span>Free shipping On all orders</li>
+				<li><span class="glyphicon glyphicon-envelope"
+					aria-hidden="true"></span> <a href="mailto:example@xyz.corp.com">infod@xyz.corp.com</a>
 				</li>
 			</ul>
 		</div>
@@ -60,12 +71,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="col-md-6 header-middle">
 				<form>
 					<div class="search">
-						<input type="search" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}" required="">
+						<input type="search" value="Search (Not implemented)" onfocus="this.value = '';"
+							onblur="if (this.value == '') {this.value = 'Search';}"
+							required="">
 					</div>
 					<div class="section_room">
-						<select id="country" onchange="change_country(this.value)" class="frm-field required">
+						<select id="country" onchange="change_country(this.value)"
+							class="frm-field required">
 							<option value="null">All categories</option>
-							<option value="null">Electronics</option>
+							<option value="null">Not implemented</option>
 						</select>
 					</div>
 					<div class="sear-sub">
@@ -75,16 +89,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</form>
 			</div>
 			<div class="col-md-3 header-right footer-bottom">
-				<ul>
-					<li>
-						<a href="#" class="use1" data-toggle="modal" data-target="#myModal4">
-							<span>Login</span>
-						</a>
-
-					</li>
-					<li>
-						<a class="fb" href="#"></a>
-					</li>
+				<ul id="loginIcons">
+					<li><a href="#" class="use1" data-toggle="modal"
+						data-target="#myModal4"> <span>Login</span>
+					</a></li>
+					<li><a class="fb" href="#"></a></li>
 
 				</ul>
 			</div>
@@ -92,84 +101,91 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 	</div>
 	<!-- //header-bot -->
-	<!-- banner -->
-	<div class="ban-top">
-		<div class="container">
-			<div class="top_nav_left">
-				<nav class="navbar navbar-default">
-					<div class="container-fluid">
-						<!-- Brand and toggle get grouped for better mobile display -->
-						<div class="navbar-header">
-							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
-							 aria-expanded="false">
-								<span class="sr-only">Toggle navigation</span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-							</button>
+
+	<div>
+		<!-- banner -->
+		<div class="ban-top">
+			<div class="container">
+				<div class="top_nav_left">
+					<nav class="navbar navbar-default">
+						<div class="container-fluid">
+							<!-- Brand and toggle get grouped for better mobile display -->
+							<div class="navbar-header">
+								<button type="button" class="navbar-toggle collapsed"
+									data-toggle="collapse"
+									data-target="#bs-example-navbar-collapse-1"
+									aria-expanded="false">
+									<span class="sr-only">Toggle navigation</span> <span
+										class="icon-bar"></span> <span class="icon-bar"></span> <span
+										class="icon-bar"></span>
+								</button>
+							</div>
+							<!-- Collect the nav links, forms, and other content for toggling -->
+							<div class="collapse navbar-collapse menu--shylock"
+								id="bs-example-navbar-collapse-1">
+								<ul class="nav navbar-nav menu__list">
+									<li class="active menu__item "><a class="menu__link"
+										href="#">Home <span class="sr-only">(current)</span>
+									</a></li>
+
+									<li class=" menu__item"><a class="menu__link"
+										href="#">Electronics</a></li>
+								</ul>
+							</div>
 						</div>
-						<!-- Collect the nav links, forms, and other content for toggling -->
-						<div class="collapse navbar-collapse menu--shylock" id="bs-example-navbar-collapse-1">
-							<ul class="nav navbar-nav menu__list">
-								<li class="active menu__item ">
-									<a class="menu__link" href="index.html">Home
-										<span class="sr-only">(current)</span>
-									</a>
-								</li>
-
-								<li class=" menu__item">
-									<a class="menu__link" href="electronics.html">Electronics</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</nav>
-			</div>
-			<div class="top_nav_right">
-				<div class="cart box_1">
-					<a href="checkout.html">
-						<h3>
-							<div class="total">
-								<i class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i>
-								<span class="simpleCart_total"></span> (
-								<span id="simpleCart_quantity" class="simpleCart_quantity"></span> items)</div>
-
-						</h3>
-					</a>
-					<p>
-						<a href="javascript:;" class="simpleCart_empty">Empty Cart</a>
-					</p>
-
+					</nav>
 				</div>
+				<div class="top_nav_right">
+					<div class="cart box_1">
+						<a href="checkout">
+							<h3>
+								<!-- <div class="total">
+									<i class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i>
+									<span class="simpleCart_total"></span> ( <span
+										id="simpleCart_quantity" class="simpleCart_quantity"></span>
+									)
+								</div> -->
+								<div class="total">
+									<i class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i>
+									<span id="simpleCart_totalNew" class="simpleCart_totalNew">$0.0</span> ( <span
+										id="simpleCart_quantityNew" class="simpleCart_quantityNew">0 items</span>
+									)
+								</div>
+
+							</h3>
+						</a>
+						<p>
+							<a href="javascript:;" class="simpleCart_empty">Empty Cart</a>
+						</p>
+
+					</div>
+				</div>
+				<div class="clearfix"></div>
 			</div>
-			<div class="clearfix"></div>
 		</div>
+		<!-- //banner-top -->
 	</div>
-	<!-- //banner-top -->
-
-
-
-
-
 
 	<!-- product-nav -->
 
 	<div class="product-easy">
 		<div class="container">
 
-			<script src="../../js/easyResponsiveTabs.js" th:src=@{/js/easyResponsiveTabs.js} type="text/javascript"></script>
+			<script src="../../js/easyResponsiveTabs.js"
+				th:src=@{/js/easyResponsiveTabs.js} type="text/javascript"></script>
 			<script type="text/javascript">
-				$(document).ready(function () {
+				$(document).ready(function() {
 					$('#horizontalTab').easyResponsiveTabs({
-						type: 'default', //Types: default, vertical, accordion           
-						width: 'auto', //auto or any width like 600px
-						fit: true   // 100% fit in a container
+						type : 'default', //Types: default, vertical, accordion           
+						width : 'auto', //auto or any width like 600px
+						fit : true
+					// 100% fit in a container
 					});
 				});
-
 			</script>
 			<div class="sap_tabs">
-				<div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
+				<div id="horizontalTab"
+					style="display: block; width: 100%; margin: 0px;">
 					<ul class="resp-tabs-list">
 						<li class="resp-tab-item" aria-controls="tab_item-0" role="tab">
 							<span>Latest Designs</span>
@@ -178,92 +194,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<li class="resp-tab-item" aria-controls="tab_item-2" role="tab"><span>Collections</span></li>  -->
 					</ul>
 					<div class="resp-tabs-container">
-						<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-0">
-							<div class="col-md-3 product-men">
-								<div class="men-pro-item simpleCart_shelfItem">
-									<div class="men-thumb-item">
-									
-										<img src="../../images/a1.jpg" th:src="@{/images/a1.jpg}" alt="" class="pro-image-front">
-										<img src="../../images/a1.jpg" th:src="@{/images/a1.jpg}" alt="" class="pro-image-back">
-
-										<span class="product-new-top">New</span>
-
-									</div>
-									<div class="item-info-product ">
-										<h4>
-											<a href="#">Product 1</a>
-										</h4>
-										<div class="info-product-price">
-											<span class="item_price">$45.99</span>
-											<del>$69.71</del>
-										</div>
-										<a href="/cart/add" class="item_add single-item hvr-outline-out button2">Add to cart</a>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-3 product-men">
-								<div class="men-pro-item simpleCart_shelfItem">
-									<div class="men-thumb-item">
-										<img src="../../images/a2.jpg" th:src="@{/images/a2.jpg}" alt="" class="pro-image-front">
-										<img src="../../images/a2.jpg" th:src="@{/images/a2.jpg}" alt="" class="pro-image-back">
-
-
-
-									</div>
-									<div class="item-info-product ">
-										<h4>
-											<a href="#">Product 2</a>
-										</h4>
-										<div class="info-product-price">
-											<span class="item_price">$99.99</span>
-											<del>$109.71</del>
-										</div>
-										<a href="cart/add" class="item_add single-item hvr-outline-out button2">Add to cart</a>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-3 product-men">
-								<div class="men-pro-item simpleCart_shelfItem">
-									<div class="men-thumb-item">
-										<img src="../../images/a3.jpg" th:src="@{/images/a3.jpg}" alt="" class="pro-image-front">
-										<img src="../../images/a3.jpg" th:src="@{/images/a3.jpg}" alt="" class="pro-image-back">
-
-										<span class="product-new-top">New</span>
-
-									</div>
-									<div class="item-info-product ">
-										<h4>
-											<a href="#">Product 3</a>
-										</h4>
-										<div class="info-product-price">
-											<span class="item_price">$119.99</span>
-											<del>$120.71</del>
-										</div>
-										<a href="/cart/add" class="item_add single-item hvr-outline-out button2">Add to cart</a>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-3 product-men">
-								<div class="men-pro-item simpleCart_shelfItem">
-									<div class="men-thumb-item">
-										<img src="../../images/a4.jpg" th:src="@{/images/a4.jpg}" alt="" class="pro-image-front">
-										<img src="../../images/a4.jpg" th:src="@{/images/a4.jpg}" alt="" class="pro-image-back">
-
-										<span class="product-new-top">New</span>
-
-									</div>
-									<div class="item-info-product ">
-										<h4>
-											<a href="#">Product 4</a>
-										</h4>
-										<div class="info-product-price">
-											<span class="item_price">$79.99</span>
-											<del>$120.71</del>
-										</div>
-										<a href="/cart/add" class="item_add single-item hvr-outline-out button2">Add to cart</a>
-									</div>
-								</div>
-							</div>
+						<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-0" id="products">
+							
 
 							<div class="clearfix"></div>
 						</div>
@@ -275,23 +207,28 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 	</div>
 	<!-- //product-nav -->
+	
+	<div><select style="display:none" id="cartProductsHidden"></select></div>
 
 	<!-- footer -->
 	<div class="footer">
 		<div class="container">
 
 			<div class="clearfix"></div>
-			<p class="copy-right">&copy 2018 XYZ Corp. All rights reserved | Design by
-				<a href="https://hackathon.thbs.com/">XYZ Corp</a>
+			<p class="copy-right">
+				&copy 2018 XYZ Corp. All rights reserved | Design by <a
+					href="https://hackathon.thbs.com/">XYZ Corp</a>
 			</p>
 		</div>
 	</div>
 
-	<div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal fade" id="myModal4" tabindex="-1" role="dialog"
+		aria-labelledby="myModalLabel">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content modal-info">
 				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
 				</div>
@@ -303,19 +240,25 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<form>
 									<div class="sign-up">
 										<h4>Username :</h4>
-										<input type="text" value="Type here" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Type here';}"
-										 required="">
+										<input type="text" value="Type here"
+											onfocus="this.value = '';"
+											onblur="if (this.value == '') {this.value = 'Type here';}"
+											required="">
 									</div>
 									<div class="sign-up">
 										<h4>Password :</h4>
-										<input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}"
-										 required="">
+										<input type="password" value="Password"
+											onfocus="this.value = '';"
+											onblur="if (this.value == '') {this.value = 'Password';}"
+											required="">
 
 									</div>
 									<div class="sign-up">
 										<h4>Re-type Password :</h4>
-										<input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}"
-										 required="">
+										<input type="password" value="Password"
+											onfocus="this.value = '';"
+											onblur="if (this.value == '') {this.value = 'Password';}"
+											required="">
 
 									</div>
 									<div class="sign-up">
@@ -329,30 +272,34 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<form>
 									<div class="sign-in">
 										<h4>Username :</h4>
-										<input type="text" value="Type here" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Type here';}"
-										 required="">
+										<input type="text" value="Type here"
+											onfocus="this.value = '';"
+											onblur="if (this.value == '') {this.value = 'Type here';}"
+											required="required" id="loginUsername">
 									</div>
 									<div class="sign-in">
 										<h4>Password :</h4>
-										<input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}"
-										 required="">
-										<a href="#">Forgot password?</a>
+										<input type="password" value="Password"
+											onfocus="this.value = '';"
+											onblur="if (this.value == '') {this.value = 'Password';}"
+											required="required" id="loginPassword"> <a href="#">Forgot password?</a>
 									</div>
 									<div class="single-bottom">
-										<input type="checkbox" id="brand" value="">
-										<label for="brand">
-											<span></span>Remember Me.</label>
+										<input type="checkbox" id="brand" value=""> <label
+											for="brand"> <span></span>Remember Me.
+										</label>
 									</div>
 									<div class="sign-in">
-										<input type="submit" value="SIGNIN">
+										<input type="button" onclick="loginUser()" value="SIGN IN">
+										<!-- <input type="submit" onclick="loginUser()" value="SIGN IN"> -->
 									</div>
 								</form>
 							</div>
 							<div class="clearfix"></div>
 						</div>
-						<p>By logging in you agree to our
-							<a href="#">Terms and Conditions</a> and
-							<a href="#">Privacy Policy</a>
+						<p>
+							By logging in you agree to our <a href="#">Terms and
+								Conditions</a> and <a href="#">Privacy Policy</a>
 						</p>
 					</div>
 				</div>

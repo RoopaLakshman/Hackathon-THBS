@@ -1,6 +1,6 @@
 package com.xyzcorp.ecommerce.thhs.model;
 
-public class CartId {
+public class OrderBody {
 
 	private String cartId;
 
@@ -11,5 +11,9 @@ public class CartId {
 	public void setCartId(String cartId) {
 		this.cartId = cartId;
 	}
+	
+
+	
+
 
 }

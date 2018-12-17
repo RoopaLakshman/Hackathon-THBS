@@ -1,6 +1,7 @@
 package com.xyzcorp.ecommerce.thhs.model;
 
-public class Credentials {
+
+public class Credentials{
 
 	private String username;
 	private String password;

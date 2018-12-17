@@ -1,10 +1,19 @@
-package com.xyzcorp.ecommerce.thhs.model;
+package com.xyzcorp.ecommerce.thhs.vo;
 
-public class CartDetail {
+import com.opencsv.bean.CsvBindByName;
 
+public class CartDetailVO {
+
+	@CsvBindByName
 	private String productId;
-	private Integer quantity;
+
+	@CsvBindByName
+	private String quantity;
+
+	@CsvBindByName
 	private String cartId;
+
+	@CsvBindByName
 	private String userName;
 
 	public String getProductId() {
@@ -15,11 +24,11 @@ public class CartDetail {
 		this.productId = productId;
 	}
 
-	public Integer getQuantity() {
+	public String getQuantity() {
 		return quantity;
 	}
 
-	public void setQuantity(Integer quantity) {
+	public void setQuantity(String quantity) {
 		this.quantity = quantity;
 	}
 

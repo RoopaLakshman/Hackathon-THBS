@@ -1,14 +1,29 @@
-package com.xyzcorp.ecommerce.thhs.model;
+package com.xyzcorp.ecommerce.thhs.vo;
 
-public class ProductDetail {
+import com.opencsv.bean.CsvBindByName;
 
+public class ProductDetailVO {
+
+	@CsvBindByName
 	private String productId;
+	
+	@CsvBindByName
 	private String name;
+	
+	@CsvBindByName
 	private String description;
+	
+	@CsvBindByName
 	private String cost;
+	
+	@CsvBindByName
 	private String category;
+	
+	@CsvBindByName
 	private String currency;
-	private Integer qtyAvailable;
+	
+	@CsvBindByName
+	private String qtyAvailable;
 
 	public String getProductId() {
 		return productId;
@@ -58,11 +73,11 @@ public class ProductDetail {
 		this.currency = currency;
 	}
 
-	public Integer getQtyAvailable() {
+	public String getQtyAvailable() {
 		return qtyAvailable;
 	}
 
-	public void setQtyAvailable(Integer qtyAvailable) {
+	public void setQtyAvailable(String qtyAvailable) {
 		this.qtyAvailable = qtyAvailable;
 	}
 
