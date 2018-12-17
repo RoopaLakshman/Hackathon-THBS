@@ -1,8 +1,8 @@
-Project Title
+THHS
 This is a JAVA spring boot application which was developed for a Hackathon competition held in my company. We were team of 3 in this project.
 
 Getting Started
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 Overview - 
 This is a simple eCommerce application which has below functionalities -
@@ -19,7 +19,7 @@ The initial input data csv file is mandatory. All the details from input csv fil
 We have used opencsv for csv operations.
 
 Limitations -
-A user can view products, add and view items in cart, modify & delete cart items and submit his cart details through Browser.
+A user can login and view products, add and view items in cart, modify & delete cart items and submit his cart details through Browser.
 However, to add new products you should call the /product/add API.
 
 Prerequisites
@@ -29,8 +29,8 @@ Port 7000 should not be in use
 How to Build?
 1. Download the project and unzip.
 2. Open command prompt -> Navigate to project directory thhs
-3. Run mvn package
-4. If the build executed successfully then it should have created a jar by name thhs<version>.jar in target folder
+3. Run "mvn package" command
+4. If the build executes successfully then it should create a jar by name thhs<version>.jar in target folder
 5. Navigate to target folder and double check if the jar exists
 
 To start application
@@ -44,7 +44,7 @@ Test application
 Open Browser and type localhost:7000/thhs/api
 This should open up the application
 
-Authors & Teammates
+Authors
 Roopa Lakshmanaiah
 
 Acknowledgments
