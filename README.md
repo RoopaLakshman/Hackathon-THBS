@@ -1,8 +1,13 @@
 THHS - 
-This is a JAVA spring boot application which was developed for a Hackathon competition held in my company. We were team of 3 members and the project was implemented in around 40 hours of timelines.
+This is a JAVA spring boot application which was developed for a Hackathon competition held in my company. We were team of 3 members and the project was implemented in around 40 hours of timeframe.
 
 Getting Started - 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
+Technologies Used - 
+JAVA/Springboot
+HTML5, CSS3, JQuery
+OpenCSV
 
 Overview - 
 This is a simple eCommerce application which has below functionalities -
@@ -15,12 +20,11 @@ This is a simple eCommerce application which has below functionalities -
 	7. View products in cart (Lists all products in cart)
 	8. Submit your cart (Writes all cart details into a csv file)
 	
-The initial input data csv file is mandatory. All the details from input csv file is written into separate csv files for further operations.
+The initial input data csv file is mandatory. The data from input csv file is written into separate csv files for further operations.
 We have used opencsv for csv operations.
 
 Limitations -
-A user can login and view products, add and view items in cart, modify & delete cart items and submit his cart details through Browser.
-However, to add new products you should call the /product/add API.
+Not all functionalitie are provided in user interface (Such as Search products, filter products, add products)
 
 Prerequisites - 
 Java 1.8, Maven
@@ -35,19 +39,17 @@ How to Build? -
 
 To start application - 
 This is springboot application and has a embedded server (Tomcat) in it
-The csv file should be passed as a parameter for the project
+The csv file should be passed as a parameter for the project (You can use the ProHactive-DataModel.csv)
 
 1. Run below command
-	java -jar thhs<version>.jar ProHactive-DataModel.csv
+	java -jar thhs<version>.jar DataFile.csv
 
 Test application - 
-Open Browser and type localhost:7000/thhs/api
-This should open up the application
+Use any Browser and hit localhost:7000/thhs/api
+Login using credentails from csv file.
 
-Authors - 
-Roopa Lakshmanaiah
 
-Acknowledgments - 
+Team members and Acknowledgements - 
 Vasant Sakre,
 Nagesh MH,
-Our company's UX/UI team
+TOrry Harris UX/UI team
