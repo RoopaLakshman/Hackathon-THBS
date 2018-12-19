@@ -52,4 +52,4 @@ Login using credentails from csv file.
 Team members and Acknowledgements - 
 Vasant Sakre,
 Nagesh MH,
-TOrry Harris UX/UI team
+Torry Harris UX/UI team
